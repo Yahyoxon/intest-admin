@@ -1,0 +1,156 @@
+.login-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  position: relative;
+
+  //Input styles
+  .login-inputarea {
+    position: relative;
+    display: flex;
+    width: 100%;
+    border-radius: 8px;
+
+    &.error {
+      box-shadow: 0 0 1px 1px red;
+      animation: errorAnimation 0.3s linear 2;
+
+      .login-input__bordered {
+        border: none;
+      }
+
+      input {
+        border: none;
+      }
+    }
+
+    input[type="email"] {
+      padding-right: 40px;
+    }
+  }
+
+  .login-input {
+    width: 100%;
+    border-radius: 8px;
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: 500;
+    outline: none;
+    box-shadow: none;
+    transition: all 0.2s linear;
+    border: 1px solid rgba(184, 184, 184, 0.6);
+    background-color: #fff;
+
+    &:focus {
+      border: 1px solid #003BCF;
+      background-color: #fff !important;
+    }
+
+    &:disabled {
+      background-color: rgba(255, 255, 255, 0.7);
+    }
+
+    &::placeholder {
+      color: rgba(24, 52, 127, 0.34);
+      font-size: 17px;
+      font-weight: 400;
+    }
+
+
+    &__big {
+      padding: 20px 30px;
+    }
+
+    &__small {
+      padding: 10px 29px;
+    }
+
+    &__bordered {
+      border: 1px solid rgba(23, 31, 38, 0.2);
+    }
+
+    &__error {
+      animation: errorAnimation 0.3s 2;
+      box-shadow: 0 0 1px 1px rgba(255, 0, 0, 0.5);
+    }
+  }
+
+
+  //Label Styles
+  .login-label {
+    font-size: 14px;
+    font-weight: 400;
+    position: absolute;
+    pointer-events: none;
+    top: -8px;
+    left: 18px;
+    z-index: 99;
+    color: rgba(0, 0, 0, 0.4);
+    background-color: #fff;
+    padding: 0 10px;
+    border-radius: 7px;
+  }
+
+
+  //Input extra data
+  .login-extra {
+    height: 22px;
+    object-fit: cover;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    z-index: 999;
+  }
+
+  //Form Error
+  .login-error {
+    position: absolute;
+    top: 104%;
+    left: 0;
+    font-size: 13px;
+    color: rgba(255, 0, 0, 0.75);
+    line-height: 15px;
+  }
+}
+
+.dark{
+  .login-group{
+    .login-label {
+      color: #d7dde6;
+      background-color: rgb(35,42,59);
+    }
+  
+    .login-input{
+      background-color: rgba(41, 49, 69, 1);
+
+      &:focus {
+        background-color:rgba(41, 49, 69, 1) !important;
+      }
+
+      &::placeholder{
+        color: #fff;
+      }
+    }
+  }
+}
+
+@keyframes errorAnimation {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-3px);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  75% {
+    transform: translateX(3px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

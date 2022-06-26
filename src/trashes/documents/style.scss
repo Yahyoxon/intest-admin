@@ -1,0 +1,45 @@
+.documentSize {
+	background-color: #efefef;
+	padding: 4px 8px;
+	border-radius: 6px;
+}
+.documentHover {
+	.main-table-tbody {
+		.main-table-tr:hover {
+			background-color: #f4f4f4;
+			box-shadow: -20px 3px 20px rgba($color: #ccc, $alpha: 0.3);
+			.main-table-td {
+				background-color: transparent;
+				box-shadow: none;
+			}
+			.documentSize {
+				background-color: #b5e4ca;
+			}
+			.text-right {
+				background-color: transparent;
+			}
+		}
+	}
+}
+
+html.dark {
+	.documentHover {
+		.main-table-tbody {
+			.main-table-tr {
+				.documentSize {
+					background-color: #313a55;
+				}
+			}
+			.main-table-tr:hover {
+				background-color: #313a55;
+				box-shadow: 0;
+				.documentSize {
+					background-color: #313a55;
+				}
+				.text-right {
+					background-color: transparent;
+				}
+			}
+		}
+	}
+}

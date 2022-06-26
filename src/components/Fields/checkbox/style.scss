@@ -1,0 +1,96 @@
+.form-check {
+	display: flex;
+	align-items: center;
+
+	&-label {
+		margin-left: 0.5rem;
+		cursor: pointer;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+		--tw-text-opacity: 1;
+		color: rgba(74, 85, 104, var(--tw-text-opacity));
+	}
+
+	&-input {
+		&:focus {
+			outline: 2px solid transparent;
+			outline-offset: 2px;
+			--tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 0 #fff;
+			--tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(3px + 0px)
+				rgba(59, 130, 246, 0.5);
+			box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow),
+				0 0 transparent;
+		}
+		&[type="checkbox"] {
+			width: 16px;
+			height: 16px;
+			border-radius: 0.2em;
+			position: relative;
+			cursor: pointer;
+			-webkit-appearance: none;
+			-moz-appearance: none;
+			appearance: none;
+			overflow: hidden;
+			border-width: 1px;
+			--tw-border-opacity: 1;
+			border-color: rgba(226, 232, 240, var(--tw-border-opacity));
+			padding: 0;
+			--tw-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+			box-shadow: var(--tw-ring-offset-shadow, 0 0 transparent),
+				var(--tw-ring-shadow, 0 0 transparent), var(--tw-shadow);
+
+			&::before {
+				content: "";
+				transition: all 0.2s ease-in-out;
+				background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none' stroke='%23fff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' class='feather feather-check'%3E%3Cpath d='M20 6L9 17l-5-5'/%3E%3C/svg%3E");
+				background-size: 80%;
+				position: absolute;
+				display: flex;
+				height: 100%;
+				width: 100%;
+				align-items: center;
+				justify-content: center;
+				background-position: 50%;
+				background-repeat: no-repeat;
+				--tw-text-opacity: 1;
+				color: rgba(255, 255, 255, var(--tw-text-opacity));
+				opacity: 0;
+			}
+			&:checked {
+				--tw-border-opacity: 1;
+				border-color: rgba(20, 46, 113, var(--tw-border-opacity));
+				--tw-bg-opacity: 1;
+				background-color: rgba(20, 46, 113, var(--tw-bg-opacity));
+
+				&::before {
+					opacity: 1;
+				}
+			}
+		}
+	}
+}
+
+.dark .form-check {
+	&-label {
+		--tw-text-opacity: 1;
+		color: rgba(160, 174, 192, var(--tw-text-opacity));
+	}
+
+	&-input {
+		&[type="checkbox"] {
+			--tw-border-opacity: 1;
+			border-color: rgba(63, 72, 101, var(--tw-border-opacity));
+			--tw-bg-opacity: 1;
+			background-color: rgba(63, 72, 101, var(--tw-bg-opacity));
+
+			&:checked {
+				--tw-border-opacity: 1;
+				border-color: rgba(20, 46, 113, var(--tw-border-opacity));
+				--tw-bg-opacity: 1;
+				background-color: rgba(20, 46, 113, var(--tw-bg-opacity));
+			}
+		}
+	}
+}

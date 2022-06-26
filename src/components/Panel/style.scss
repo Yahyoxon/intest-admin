@@ -1,0 +1,21 @@
+.preview {
+  transition: max-height 0.3s linear;
+}
+
+.--hasAccordion {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.accordion__chevron {
+  width: 16px;
+  object-fit: cover;
+  transition: transform 0.3s linear;
+  transform-origin: center;
+  // user-select: none;
+}
+.--overflow-y {
+  overflow-y: hidden;
+}

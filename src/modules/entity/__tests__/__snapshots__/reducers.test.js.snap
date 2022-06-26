@@ -1,0 +1,132 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Entity Reducers LoadALL with initial state FAILURE 1`] = `
+Object {
+  "movieEntity": Object {
+    "movieEntityType": Object {
+      "error": "error text",
+      "ids": Array [
+        1,
+        2,
+        3,
+      ],
+      "isFetched": true,
+      "meta": Object {
+        "currentPage": 1,
+        "pageCount": 1,
+        "perPage": 20,
+        "totalCount": 0,
+      },
+      "params": Object {
+        "extra": Object {},
+        "filter": Object {},
+      },
+    },
+  },
+}
+`;
+
+exports[`Entity Reducers LoadALL with initial state REQUEST 1`] = `
+Object {
+  "movieEntity": Object {
+    "movieEntityType": Object {
+      "ids": Array [
+        1,
+        2,
+        3,
+      ],
+      "isFetched": false,
+      "meta": Object {
+        "currentPage": 1,
+        "pageCount": 1,
+        "perPage": 20,
+        "totalCount": 0,
+      },
+      "params": Object {
+        "extra": Object {},
+        "filter": Object {},
+      },
+    },
+  },
+}
+`;
+
+exports[`Entity Reducers LoadALL with initial state SUCCESS 1`] = `
+Object {
+  "movieEntity": Object {
+    "movieEntityType": Object {
+      "ids": Array [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+      ],
+      "isFetched": true,
+      "meta": Object {
+        "currentPage": 1,
+        "pageCount": 1,
+        "perPage": 20,
+        "totalCount": 0,
+      },
+      "params": Object {
+        "extra": Object {},
+        "filter": Object {},
+      },
+    },
+  },
+}
+`;
+
+exports[`Entity Reducers LoadOne with initial state FAILURE 1`] = `
+Object {
+  "movieEntity": Object {
+    "movieEntityTypeOne": Object {
+      "error": "error text",
+      "id": 1,
+      "isFetched": true,
+      "meta": Object {
+        "currentPage": 1,
+        "pageCount": 1,
+        "perPage": 20,
+        "totalCount": 0,
+      },
+    },
+  },
+}
+`;
+
+exports[`Entity Reducers LoadOne with initial state REQUEST 1`] = `
+Object {
+  "movieEntity": Object {
+    "movieEntityTypeOne": Object {
+      "id": 1,
+      "isFetched": false,
+      "meta": Object {
+        "currentPage": 1,
+        "pageCount": 1,
+        "perPage": 20,
+        "totalCount": 0,
+      },
+    },
+  },
+}
+`;
+
+exports[`Entity Reducers LoadOne with initial state SUCCESS 1`] = `
+Object {
+  "movieEntity": Object {
+    "movieEntityTypeOne": Object {
+      "id": 1,
+      "isFetched": true,
+      "meta": Object {
+        "currentPage": 1,
+        "pageCount": 1,
+        "perPage": 20,
+        "totalCount": 0,
+      },
+    },
+  },
+}
+`;

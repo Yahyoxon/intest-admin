@@ -1,0 +1,159 @@
+.map-wrapper {
+	padding: 0;
+	height: 100%;
+	z-index: 99;
+	position: relative;
+
+	.map-container {
+		width: 100%;
+		min-height: 100vh;
+		height: 100%;
+		border-radius: 5px;
+		color: rgba(0, 0, 0, 0.57);
+
+		.map-actions {
+			position: absolute;
+			right: 60px;
+			top: 10px;
+			z-index: 900;
+		}
+
+		.draw-component {
+			.leaflet-popup-pane {
+				.leaflet-popup {
+					width: 300px !important;
+					.leaflet-popup-content-wrapper {
+						border-radius: 2px !important;
+						padding: 3px 0 3px !important;
+						// width: 100%;
+					}
+				}
+			}
+		}
+	}
+
+	&-info {
+		width: 100%;
+		height: 80vh;
+		padding: 15px;
+		margin-top: 50px;
+		overflow-y: auto;
+
+		-moz-box-shadow: inset 0 0 5px #000000;
+		-webkit-box-shadow: inset 0 0 5px #000000;
+		box-shadow: inset 0 0 5px #000000;
+	}
+
+	.outside-of-uzbekistan {
+		stroke: transparent;
+		fill: rgba(0, 0, 0, 0.9);
+	}
+
+	.active-region-border {
+		stroke: #999;
+		fill: none;
+	}
+
+	.region-filled {
+		stroke: #999;
+		fill: rgba(0, 0, 0, 0.9);
+	}
+
+	.progress-bar {
+		position: absolute;
+		top: 70px;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		height: 15px;
+		width: 80%;
+		background: #fff;
+		border-radius: 100px;
+		z-index: 9996;
+		transition: top 1s linear;
+
+		&__shadow {
+			background: #bdc7e3;
+			width: 100%;
+			height: 15px;
+			border-radius: 100px;
+			position: absolute;
+			left: 0;
+			right: 0;
+			z-index: 9997;
+		}
+
+		&__loaded {
+			position: absolute;
+			left: 0;
+			height: 15px;
+			background: linear-gradient(180deg, #304fa8 0%, #102767 100%);
+			border-radius: 100px;
+			z-index: 9998;
+
+			&__percent {
+				position: absolute;
+				right: -25px;
+				top: 20px;
+
+				width: 50px;
+				height: 25px;
+				background: #fff;
+				border-radius: 5px;
+				font-size: 15px;
+				color: #000;
+				font-weight: bold;
+
+				display: flex;
+				align-items: center;
+				justify-content: center;
+
+				&::before {
+					content: "";
+					position: absolute;
+					top: -5px;
+					z-index: -1;
+					border-style: solid;
+					border-width: 0 20px 20px 20px;
+					border-color: transparent transparent #fff transparent;
+				}
+			}
+		}
+	}
+	.map-spinner {
+		width: 100%;
+		height: 100%;
+		border-radius: 5px;
+		position: absolute;
+		inset: 0;
+		background: rgba(0, 0, 0, 0.3);
+		z-index: 9995;
+
+		svg {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+}
+
+.leaflet-bar {
+	border: none !important;
+}
+
+// .leaflet-touch-icon{
+// 	width: 5px;
+// 	height: 5px;
+
+// }
+
+
+.leaflet-div-icon {
+	width: 10px !important;
+	height: 10px !important;
+	margin-left: -5px !important;
+	margin-top: -5px !important;
+	border-radius: 50%;
+	background: rgb(0, 255, 76);
+}

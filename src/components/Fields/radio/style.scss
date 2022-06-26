@@ -1,0 +1,83 @@
+.form-check {
+	display: flex !important;
+	align-items: center !important;
+
+	&-input[type="radio"] {
+		width: 16px;
+		height: 16px;
+		position: relative;
+		cursor: pointer;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+		overflow: hidden;
+		border-radius: 9999px;
+		border-width: 1px;
+		border-color: rgba(20, 46, 113, 1);
+		padding: 0;
+		box-shadow: 0 0 transparent, 0 0 transparent, 0 0 transparent;
+
+		&::before {
+			content: "";
+			width: 10px;
+			height: 10px;
+			transition: all 0.2s ease-in-out;
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			margin: auto;
+			border-radius: 9999px;
+			background-color: rgba(20, 46, 113, 1);
+			opacity: 0;
+		}
+
+		&:checked {
+			border-color: rgba(20, 46, 113, 1);
+
+			&::before {
+				opacity: 1;
+			}
+		}
+		&:focus {
+			outline: 2px solid transparent;
+			outline-offset: 2px;
+			--tw-ring-offset-shadow:  /*!*/ /*!*/ 0 0 0 0px
+				rgba(59, 130, 246, 0.5);
+			--tw-ring-shadow:  /*!*/ /*!*/ 0 0 0 calc(3px + 0px)
+				rgba(59, 130, 246, 0.5);
+			box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow),
+				0 0 transparent;
+		}
+	}
+
+	&-label {
+		margin-left: 0.5rem;
+		cursor: pointer;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+		color: rgba(74, 85, 104, 1);
+	}
+}
+.dark .form-check {
+	&-input[type="radio"] {
+		border-color: rgba(30, 37, 51, 1);
+		background-color: rgba(35, 42, 59, 1);
+	}
+	&-label {
+		color: rgba(160, 174, 192, 1);
+	}
+}
+
+.inbox .form-check {
+	&-input {
+		border-color: rgba(160, 174, 192, 1);
+
+		&:checked {
+			border-color: rgba(7, 26, 80, 1);
+		}
+	}
+}

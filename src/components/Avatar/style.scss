@@ -1,0 +1,89 @@
+.avatar {
+	position: relative;
+	background-color: #eeeeee;
+	overflow: hidden;
+	border-radius: 4px;
+
+	&:not(.avatar--rectangle) {
+		border-radius: 5px;
+
+		&.avatar--lg {
+			width: 60px;
+			min-width: 60px;
+			height: 60px;
+		}
+
+		&.avatar--md {
+			width: 52px;
+			min-width: 52px;
+			height: 52px;
+		}
+
+		// &.avatar--sm {
+		// }
+
+		// &.avatar--xs {
+		// }
+	}
+	&-circle {
+		border-radius: 50% !important;
+	}
+
+	&--rectangle {
+		&.avatar--lg {
+			width: 80px;
+			min-width: 80px;
+			height: 60px;
+		}
+
+		&.avatar--md {
+			width: 72px;
+			min-width: 72px;
+			height: 52px;
+		}
+	}
+
+	&__badge {
+		width: 20px;
+		height: 20px;
+		display: flex;
+		background: url("icon-medal.svg") no-repeat center;
+		bottom: -50%;
+		right: -50%;
+		transform: translate(-100%, -100%);
+		position: absolute;
+	}
+
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	&.zoom-in {
+		--tw-translate-x: 0;
+		--tw-translate-y: 0;
+		--tw-rotate: 0;
+		--tw-skew-x: 0;
+		--tw-skew-y: 0;
+		--tw-scale-x: 1;
+		--tw-scale-y: 1;
+		transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+			scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+		cursor: pointer;
+		transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+		transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+		transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter,
+			-webkit-backdrop-filter;
+		transition-duration: 0.15s;
+		transition-duration: 0.3s;
+		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+		&:hover {
+			--tw-scale-x: 1.05;
+			--tw-scale-y: 1.05;
+			--tw-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+			box-shadow: var(--tw-ring-offset-shadow, 0 0 transparent), var(--tw-ring-shadow, 0 0 transparent), var(--tw-shadow);
+		}
+	}
+}

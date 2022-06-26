@@ -1,0 +1,223 @@
+.datepicker-component {
+	.form-control {
+		caret-color: transparent;
+		user-select: none;
+
+		&:hover,
+		&:focus {
+			cursor: pointer;
+		}
+
+		&:disabled {
+			cursor: not-allowed;
+		}
+	}
+
+	.datepicker {
+		z-index: 9999 !important;
+		border-radius: 7px !important;
+		padding: 1.5rem 0 !important;
+		background-color: rgba(255, 255, 255, 1) !important;
+		box-shadow: 0 3px 20px rgba(0, 0, 0, 0.1) !important;
+
+		.DateRangePicker {
+			&__MonthHeader {
+				margin-top: 10px !important;
+				margin-bottom: 5px !important;
+			}
+
+			&__MonthHeaderSelect {
+				background: rgba(35, 42, 59, 1) !important;
+			}
+
+			&__LegendItemColor {
+				&--selection {
+					background-color: rgba(20, 46, 113, 1) !important;
+				}
+			}
+
+			&__CalendarHighlight {
+				&--single {
+					border: 1px solid darken(rgba(20, 46, 113, 1), 5) !important;
+				}
+			}
+
+			&__CalendarSelection {
+				background-color: rgba(20, 46, 113, 1) !important;
+				border: 1px solid darken(rgba(20, 46, 113, 1), 5) !important;
+			}
+		}
+
+		&-today {
+			position: absolute;
+			left: 15rem;
+			// bottom: ;
+			z-index: 9999;
+			border: 1px solid #f6f7f9;
+			border-radius: 7px;
+			padding: 2px 10px;
+			font-size: 12px;
+			cursor: pointer;
+
+			&:hover,
+			&:focus {
+				background-color: rgb(54, 94, 197);
+				color: #fff;
+			}
+		}
+	}
+}
+
+.dark {
+	.datepicker-component {
+		.datepicker {
+			background: rgba(35, 42, 59, 1) !important;
+
+			.DateRangePicker {
+				&__WeekdayHeading {
+					border-bottom: 1px solid #666 !important;
+					color: #f4f5f6 !important;
+
+					abbr[title] {
+						color: #fff !important;
+					}
+				}
+
+				&__MonthHeader {
+					color: #f4f5f6 !important;
+				}
+
+				&__Date {
+					border: 0 solid #f4f5f6 !important;
+					color: #f4f5f6 !important;
+
+					&--weekend {
+						background-color: rgba(35, 42, 59, 1) !important;
+					}
+
+					&--is-highlighted {
+						color: #f4f5f6 !important;
+					}
+				}
+
+				&__CalendarSelection {
+					background-color: rgb(79, 115, 206) !important;
+					border: 1px solid darken(rgb(79, 115, 206), 5) !important;
+				}
+
+				&__CalendarHighlight {
+					&--single {
+						color: #f4f5f6 !important;
+						background-color: transparent !important;
+						border: 1px solid darken(rgb(79, 115, 206), 5) !important;
+					}
+				}
+			}
+
+			&-today {
+				border: 1px solid rgba(20, 46, 113, 1);
+				background-color: rgba(32, 63, 144, 1);
+
+				&:hover,
+				&:focus {
+					background-color: rgb(54, 94, 197);
+					color: #fff;
+				}
+			}
+		}
+	}
+
+	.DateRangePicker__PaginationArrow {
+		border: none;
+	}
+
+	.DateRangePicker__PaginationArrow:hover {
+		background-color: #313a55;
+	}
+
+	.DateRangePicker__PaginationArrowIcon--previous {
+		border-color: transparent !important;
+		border-left: 8px solid transparent !important;
+		border-right: 8px solid #aaa !important;
+		right: 11px !important;
+	}
+
+	.DateRangePicker__PaginationArrowIcon--next {
+		border-color: transparent !important;
+		border-right: 8px solid transparent !important;
+		border-left: 8px solid #aaa !important;
+		right: 11px !important;
+	}
+
+	.react-datepicker {
+		background-color: rgba(35, 42, 59, 1) !important;
+		color: #f4f5f6 !important;
+
+		&__triangle {
+			&::after,
+			&::before {
+				border-bottom-color: rgba(35, 42, 59, 1) !important;
+			}
+		}
+
+		&__time,
+		&__header,
+		&__today-button {
+			background-color: rgba(35, 42, 59, 1) !important;
+
+     .react-datepicker__current-month, .react-datepicker-time__header{
+        color: #f4f5f6 !important;
+      }
+		}
+
+    &__time{
+      &-list-item{
+        &:hover{
+          background-color: rgba(32, 63, 144, 1) !important;
+        }
+      }
+    }
+
+		&__header__dropdown {
+			.react-datepicker__month-dropdown-container {
+				background-color: rgba(35, 42, 59, 1) !important;
+			}
+		}
+
+    &__month-select, &__year-select{
+      background-color: rgba(35, 42, 59, 1) !important;
+    }
+
+
+    &__day{
+      color: #f4f5f6 !important;
+      &-name{
+        color: #f4f5f6 !important;
+      }
+      &:hover{
+        background-color: rgba(32, 63, 144, 1) !important;
+      }
+    }
+	}
+}
+
+.datepicker-modal__overlay {
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.32);
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 9999;
+}
+
+#datepicker-modal {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	background: #fff;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+}

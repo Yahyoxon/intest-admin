@@ -1,0 +1,53 @@
+.ck-file-dialog-button {
+	position: relative !important;
+}
+.ck-file-dialog-button .image-upload-btn {
+	width: 100% !important;
+	height: 100% !important;
+	position: absolute !important;
+	top: 0 !important;
+	right: 0 !important;
+	z-index: 5 !important;
+	cursor: pointer !important;
+	background-image: url("./icons/add.svg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 22px;
+	background-color: #fafafa;
+	&:hover {
+		background-color: #e6e6e6;
+	}
+}
+
+.ck-editor__main {
+	height: 300px;
+	overflow-y: auto;
+}
+
+.ck-editor__editable_inline {
+	height: 100%;
+}
+
+.has-error {
+	.ck.ck-editor__main > .ck-editor__editable:not(.ck-focused) {
+		border-color: #f5222d;
+	}
+}
+
+.dark {
+	.ck.ck-content {
+		background-color: rgba(49, 58, 85, 1) !important;
+	}
+	.ck.ck-toolbar {
+		background-color: rgba(255, 255, 255, 0.3) !important;
+	}
+}
+
+.ck.ck-editor__editable_inline {
+	margin-top: 1rem !important;
+	margin-bottom: 1rem !important;
+}
+
+.ck.ck-editor__editable_inline > * {
+	margin: 10px 0 !important;
+}

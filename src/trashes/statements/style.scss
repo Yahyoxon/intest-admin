@@ -1,0 +1,267 @@
+%fontStyle {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 16px;
+	text-transform: capitalize;
+}
+%fontStyleResult {
+	font-style: normal;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 19px;
+	text-transform: capitalize;
+}
+.regionResults {
+	border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+	&-inner {
+		display: flex;
+		align-items: center;
+		padding: 14px 16px;
+
+		&-region {
+			margin-right: 35px;
+			@extend %fontStyle;
+		}
+		&-all {
+			margin-right: 16px;
+			@extend %fontStyle;
+			span {
+				@extend %fontStyleResult;
+			}
+		}
+		&-completed {
+			margin-right: 16px;
+			@extend %fontStyle;
+			span {
+				color: #23ba0a;
+				@extend %fontStyleResult;
+			}
+		}
+		&-progress {
+			margin-right: 16px;
+			@extend %fontStyle;
+			span {
+				color: #2f88ff;
+				@extend %fontStyleResult;
+			}
+		}
+		&-pending {
+			@extend %fontStyle;
+			span {
+				color: #e91717;
+				@extend %fontStyleResult;
+			}
+		}
+	}
+}
+
+.regionInfo {
+	overflow-x: auto;
+	.main-table {
+		.main-table-thead {
+			.main-table-tr {
+				background-color: #fff;
+				.main-table-th:first-child {
+					border-bottom-left-radius: 0;
+				}
+				.main-table-th {
+					color: #000000;
+					border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+				}
+				.whitespace-nowrap {
+					background-color: transparent;
+					border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+					border-bottom-right-radius: 0;
+				}
+			}
+		}
+		.main-table-tbody {
+			.main-table-tr {
+				.main-table-td:first-child {
+					border-bottom-left-radius: 0;
+				}
+
+				.main-table-td {
+					border-bottom: 1px solid #ececec;
+					box-shadow: none;
+				}
+				.text-right {
+					box-shadow: none;
+					border-bottom: 1px solid #ececec;
+					border-bottom-right-radius: 0;
+				}
+			}
+		}
+	}
+}
+
+html.dark {
+	.regionResults {
+		border-bottom: 1px solid #ccc;
+	}
+	.regionInfo {
+		.main-table {
+			.main-table-thead {
+				.main-table-tr {
+					background-color: transparent;
+
+					.main-table-th {
+						color: #ccc;
+						border-bottom: 1px solid #ccc;
+					}
+					.whitespace-nowrap {
+						border-bottom: 1px solid #ccc;
+					}
+				}
+			}
+		}
+	}
+}
+
+.statMentsName {
+	font-size: 17px;
+}
+.statMentsPhone {
+	white-space: nowrap;
+	font-size: 12px;
+}
+.statementsStatus {
+	border-radius: 58px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.feedback-single {
+	display: flex;
+	padding: 20px 20px 0 20px;
+	&__left {
+		width: 350px;
+	}
+	&__right {
+		padding-left: 50px;
+		flex: 1;
+	}
+}
+
+.feedback-result-item {
+	background: #ffffff;
+	border: 1px solid #e6e8f0;
+	box-sizing: border-box;
+	box-shadow: 0px 8px 26px rgba(143, 149, 178, 0.07);
+	border-radius: 8px;
+	padding: 20px 25px;
+	margin: 20px;
+	&_doc {
+		border-left: 1px solid #ccc;
+	}
+	&.--rejected {
+		background: rgba(232, 51, 84, 0.05);
+		border-color: rgba(182, 23, 61, 0.2);
+	}
+	span {
+		display: block;
+	}
+	&__reject-message {
+		margin-top: 15px;
+		span:first-child {
+			font-weight: 500;
+			margin-bottom: 5px;
+		}
+	}
+}
+
+.main-table-tr.--rejected {
+	td {
+		background-color: rgba(182, 23, 61, 0.1) !important;
+	}
+	.btn {
+		opacity: 0.5;
+		pointer-events: none;
+	}
+}
+.accepted {
+	color: green;
+	border: 1px solid green;
+	&.active {
+		background-color: green;
+		color: #fff;
+	}
+}
+.moderation {
+	border: 1px solid purple;
+	color: purple;
+	&.active {
+		background-color: purple;
+		color: #fff;
+	}
+}
+.in_progress {
+	border: 1px solid blue;
+	color: blue;
+	&.active {
+		background-color: blue;
+		color: #fff;
+	}
+}
+.reject {
+	border: 1px solid red;
+	color: red;
+	&.active {
+		background-color: red;
+		color: #fff;
+	}
+}
+
+.new {
+	border: 1px solid orange;
+	color: orange;
+	&.active {
+		background-color: orange;
+		color: #fff;
+	}
+}
+
+.expired-notification{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	margin: 0 5px;
+	&:hover{
+		.expired-notification__tooltip{
+			opacity: 1;
+			bottom: 45px;
+		}
+	}
+	&__tooltip{
+		text-align: center;
+		position: absolute;
+		background: #FFFFFF;
+		border: 1px solid #E6E8F0;
+		box-shadow: 0px 8px 16px rgba(143,149,178,.15);
+		border-radius: 8px;
+		padding: 10px;
+		width: 200px;
+		left: 50%;
+		font-size: 14px;
+		transform: translateX(-50%);
+		bottom: 40px;
+		opacity: 0;
+		pointer-events: none;
+		transition: .2s ease-in-out;
+	}
+	&__ball{
+		width: 29px;
+		height: 29px;
+		background: #FFC700;
+		content: "";
+		border-radius: 100px;
+		display: block;
+		cursor: pointer;
+		&.--green{
+			background-color: #1ecd01;
+		}
+	}
+
+}

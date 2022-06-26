@@ -1,0 +1,31 @@
+image: node:12-alpine
+
+cache:
+    key: node_modules
+    paths:
+        - node_modules/
+
+stages:
+    - deploy
+    - notify
+
+prod:
+    stage: deploy
+    script:
+        - npm install 
+        - npm rebuild node-sass
+        - npm run build-development
+        - apk add --no-cache rsync sshpass openssh curl
+        - mkdir -p ~/.ssh && chmod 777 ~/.ssh
+        - sshpass -p $SSH_PASS_PROD rsync -riz --links -e "ssh -o StrictHostKeyChecking=no" $SSH_DIRECTORY_LOCAL_PROD $SSH_USER_PROD@$SSH_HOST_PROD:$SSH_DIRECTORY_REMOTE_PROD
+        - sh .ci-notify.sh ✅
+    only:
+        - master
+    environment:
+        name: Production
+
+notify_error:
+    stage: notify
+    script:
+        - sh .ci-error-notify.sh ❌
+    when: on_failure #deploy fail

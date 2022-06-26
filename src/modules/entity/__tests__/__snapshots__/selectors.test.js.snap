@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Entity Selectors getAll selector 1`] = `
+Object {
+  "isFetched": true,
+  "items": Array [
+    Object {
+      "id": 2,
+      "name": "Movie 2",
+    },
+  ],
+  "meta": Object {
+    "currentPage": 1,
+    "pageCount": 1,
+    "perPage": 20,
+    "totalCount": 0,
+  },
+}
+`;
+
+exports[`Entity Selectors getOne selector 1`] = `
+Object {
+  "isFetched": true,
+  "item": Object {
+    "id": 1,
+    "name": "Movie 1",
+  },
+}
+`;

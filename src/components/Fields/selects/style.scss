@@ -1,0 +1,77 @@
+.form-field-select {
+	position: relative;
+	&--error {
+		.form-field__input,
+		.form-field__textarea {
+			&:focus {
+				box-shadow: rgba(206, 49, 49, 1);
+			}
+			border-color: rgba(206, 49, 49, 1);
+		}
+		.react-select__control {
+			border: 1px solid rgba(206, 49, 49, 1);
+		}
+	}
+
+	&:not(.form-field-select--error) {
+		.form-field__input,
+		.form-field__textarea {
+			&:focus {
+				box-shadow: 1 0 0 0 calc(3px + 1) rgba(59, 130, 246, 0.5);
+				border-color: rgba(59, 130, 246, 0.5);
+			}
+		}
+	}
+
+	&__label {
+		font-size: 14px;
+		font-weight: 700;
+		line-height: 20px;
+		margin-bottom: 7px;
+		display: block;
+		span {
+			color: rgb(206, 49, 49);
+			padding-left: 5px;
+		}
+	}
+	&__error {
+		position: absolute;
+		left: 0;
+		color: rgba(206, 49, 49, 1);
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 1.5;
+		min-width: 150px;
+		margin-top: 5px;
+		transition: 0.3s ease-in-out;
+		z-index: 999;
+	}
+
+	.react-select__container {
+		min-height: 20px;
+		min-width: 150px;
+
+		.react-select__control {
+			cursor: pointer;
+			border: 1px solid red;
+			padding: 3px 10px 3px 0;
+			min-height: 25px;
+
+			.react-select__indicators {
+				height: 25px;
+			}
+		}
+
+		.react-select__menu{
+			z-index: 9999 !important;
+		}
+	}
+}
+
+// .dark {
+// 	.form-field-select {
+// 		.react-select-container {
+// 			// background: rgba(35, 42, 59, 1) !important;
+// 		}
+// 	}
+// }

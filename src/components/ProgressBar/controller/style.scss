@@ -1,0 +1,61 @@
+.progress-controller-component {
+	width: 100%;
+	margin-bottom: 0.5rem;
+	label {
+		margin-bottom: 0.2rem;
+		display: inline-block;
+		font-weight: 500;
+	}
+
+	.progress-controller {
+		width: 100%;
+		input[type="range"] {
+			width: 100%;
+			// -webkit-appearance: none;
+			&:focus {
+				outline: none;
+			}
+
+			&::-webkit-slider-thumb,
+			&::-moz-range-thumb,
+			&::-ms-thumb {
+				-webkit-appearance: none;
+			}
+
+			&::-webkit-slider-thumb {
+				position: relative;
+				height: 30px;
+				width: 30px;
+				background: steelblue;
+				border-radius: 50%;
+				border: 2px solid white;
+
+				&::before {
+					position: absolute;
+					content: "";
+					height: 10px;
+					width: 500px;
+					left: -502px;
+					top: 8px;
+					background: #777;
+				}
+			}
+
+			&::-ms-track {
+				border-color: transparent;
+			}
+		}
+	}
+
+	.progress-input {
+		width: 60px;
+		height: 40px;
+		margin-left: 10px;
+		border: 1px solid rgba(0, 0, 0, 0.2);
+		border-radius: 5px;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}

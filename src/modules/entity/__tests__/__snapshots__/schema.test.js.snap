@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Entity Schema should return schema 1`] = `
+EntitySchema {
+  "_getId": [Function],
+  "_idAttribute": "movieId",
+  "_key": "movie",
+  "_mergeStrategy": [Function],
+  "_processStrategy": [Function],
+  "schema": Object {},
+}
+`;

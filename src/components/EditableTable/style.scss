@@ -1,0 +1,46 @@
+.editable__row {
+
+    &:hover .editable__input {
+      border: 1px solid rgba(0, 0, 0, 0.2);
+    }
+  }
+  
+  .editable__row:hover {
+    background-color: rgba(0, 0, 255, 0.5) !important;
+  }
+  
+  .editable__td .editable__input:hover {
+    box-shadow: 0 0 2px 2px rgba(0, 0, 255, 0.4);
+  }
+  
+  .editable__td {
+    width: 22%;
+    //vertical-align: top;
+    padding: 10px 5px;
+    vertical-align: middle;
+
+    &.index {
+      width: max-content;
+    }
+  }
+  
+  .editable__input {
+    display: flex;
+    align-items: center;
+    resize: none;
+    vertical-align: top;
+    padding: 5px 15px;
+    cursor: pointer;
+    height: 100%;
+    border: 1px solid transparent;
+    transition: all 0.2s, width 0.4s linear;
+    border-radius: 6px;
+    outline: none;
+    min-height: 35px;
+  
+    &:active, &:focus {
+      cursor: auto;
+      width: 100%;
+    }
+  }
+  

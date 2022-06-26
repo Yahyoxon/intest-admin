@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Entity Actions LoadAll Failure 1`] = `
+Object {
+  "payload": Object {
+    "entity": "movie",
+    "error": "error text",
+    "name": "movieEntityType",
+  },
+  "type": "LOAD_ALL_ENTITY/FAILURE",
+}
+`;
+
+exports[`Entity Actions LoadAll Request 1`] = `
+Object {
+  "payload": Object {
+    "entity": "movie",
+    "meta": Object {
+      "limit": 10,
+      "page": 1,
+    },
+    "name": "movieEntityType",
+    "options": Object {},
+    "url": "/movies/popular",
+  },
+  "type": "LOAD_ALL_ENTITY/REQUEST",
+}
+`;
+
+exports[`Entity Actions LoadAll Success 1`] = `
+Object {
+  "payload": Object {
+    "entity": "movie",
+    "ids": Array [
+      1,
+      2,
+      3,
+    ],
+    "meta": Object {
+      "currentPage": 1,
+      "pageCount": 1,
+      "perPage": 20,
+      "totalCount": 0,
+    },
+    "name": "movieEntityType",
+  },
+  "type": "LOAD_ALL_ENTITY/SUCCESS",
+}
+`;
+
+exports[`Entity Actions LoadOne Failure 1`] = `
+Object {
+  "payload": Object {
+    "entity": "movie",
+    "error": "error text",
+    "id": 1,
+  },
+  "type": "LOAD_ONE_ENTITY/FAILURE",
+}
+`;
+
+exports[`Entity Actions LoadOne Request 1`] = `
+Object {
+  "payload": Object {
+    "entity": "movie",
+    "id": 1,
+    "url": "/movies/popular/1",
+  },
+  "type": "LOAD_ONE_ENTITY/REQUEST",
+}
+`;
+
+exports[`Entity Actions LoadOne Success 1`] = `
+Object {
+  "payload": Object {
+    "entity": "movie",
+    "id": 1,
+  },
+  "type": "LOAD_ONE_ENTITY/SUCCESS",
+}
+`;

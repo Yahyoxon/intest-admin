@@ -1,0 +1,125 @@
+$darkColor: #000000;
+
+.resultsChart {
+	border-radius: 5px;
+	padding: 20px 27px;
+	&-header {
+		&_main {
+			h4 {
+				font-style: normal;
+				font-weight: 700;
+				font-size: 16px;
+			}
+
+			button {
+				border: 2px solid #efefef;
+				box-sizing: border-box;
+				border-radius: 12px;
+				max-width: 162px;
+				width: 100%;
+				height: 36px;
+			}
+			.resultChartSelect {
+				border: 1px solid #ccc;
+				border-radius: 4px;
+				padding: 10px 30px;
+				outline: none;
+
+				option {
+					padding: 10px;
+				}
+			}
+		}
+	}
+
+	.resultsChart-main {
+		margin-top: 37px;
+		&_left {
+			display: flex;
+			justify-content: space-between;
+			flex-direction: column;
+			.resultChart-one {
+				display: flex;
+				align-items: center;
+				span {
+					font-style: normal;
+					font-weight: 700;
+					font-size: 30px;
+					line-height: 45px;
+				}
+				p {
+					margin-left: 10px;
+					font-style: normal;
+					font-weight: 500;
+					font-size: 14px;
+					line-height: 21px;
+				}
+			}
+			.resultChart-two {
+				span {
+					width: 15px;
+					height: 15px;
+					display: inline-block;
+					border-radius: 50%;
+				}
+				p {
+					font-style: normal;
+					font-weight: 500;
+					font-size: 14px;
+					line-height: 12px;
+
+					opacity: 0.7;
+				}
+				&_p {
+					margin-top: 13px;
+				}
+			}
+			.resultChart-two:nth-child(2) {
+				span {
+					background-color: #ff8675;
+				}
+			}
+			.resultChart-two:nth-child(3) {
+				span {
+					background-color: #cdf4ff;
+				}
+			}
+			.resultChart-two:nth-child(4) {
+				span {
+					background-color: #6c5dd3;
+				}
+			}
+			.resultChart-two:nth-child(5) {
+				span {
+					background-color: #df1646;
+				}
+			}
+			.resultChart-two:nth-child(6) {
+				span {
+					background-color: #7fdf16;
+				}
+			}
+			.resultChart-two:nth-child(7) {
+				span {
+					background-color: #df16c3;
+				}
+			}
+		}
+	}
+}
+
+.dropDownOpen {
+	position: fixed;
+	opacity: 0;
+	transition: transform 0.3s linear;
+	&.active {
+		background-color: #fff;
+		box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+		z-index: 999;
+		opacity: 1;
+		max-width: 162px;
+		width: 100%;
+		padding-left: 10px;
+		transition: transform, opacity 0.3s linear;
+	}
+}

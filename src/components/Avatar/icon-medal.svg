@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63 (92445) - https://sketch.com -->
+    <title>medal</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Бригады" transform="translate(-898.000000, -345.000000)" fill-rule="nonzero">
+            <g id="Group-2-Copy-2" transform="translate(847.000000, 103.000000)">
+                <g id="Group-4" transform="translate(11.000000, 197.000000)">
+                    <g id="medal" transform="translate(50.000000, 55.000000) scale(-1, 1) translate(-50.000000, -55.000000) translate(40.000000, 45.000000)">
+                        <circle id="Oval" fill="#FCD462" cx="10" cy="10" r="10"></circle>
+                        <circle id="Oval" fill="#E56353" cx="10" cy="10" r="8.18181818"></circle>
+                        <circle id="Oval" fill="#FCD462" cx="10" cy="10" r="6.36363636"></circle>
+                        <polygon id="Path" fill="#DC8744" points="10.0454545 4.45454545 11.3434172 8.27256508 15.5454545 8.27256508 12.1464732 10.6365258 13.4444359 14.4545455 10.0454545 12.0905847 6.64647322 14.4545455 7.94443587 10.6365258 4.54545455 8.27256508 8.7474919 8.27256508"></polygon>
+                        <circle id="Oval" fill="#F6C358" cx="9.54545455" cy="0.454545455" r="1"></circle>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
